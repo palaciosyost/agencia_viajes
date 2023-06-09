@@ -1,0 +1,387 @@
+$color-card: #fbbf02;
+$color-btn: #0b3238;
+$colo-border: #fb9702;
+$colo-hover-btn: #1c616f;
+$color-green: rgb(7, 194, 7);
+$color-yellow: rgb(212, 212, 68);
+
+@mixin computer {
+    @media (min-width: 920px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+@mixin compu {
+    @media (min-width: 1000px) {
+        @content;
+    }
+}
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.bg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.322),
+            rgba(0, 0, 0, 0.872)
+        ),
+        url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    .navegador {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.845);
+        right: 0px;
+        left: 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        transition: transform 0.4s ease;
+        transform: translateX(10000px);
+        z-index: 970;
+        overflow: auto;
+        @include computer {
+            transform: translateX(0px);
+            background-color: transparent;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            height: 100px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .logo {
+            width: 250px;
+            margin-top: 70px;
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                @include computer {
+                    width: 200px;
+                }
+            }
+            @include computer {
+                margin: 0px;
+            }
+        }
+        .enlaces {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 20px;
+            a {
+                color: aliceblue;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 800;
+                text-align: center;
+                padding: 5px;
+                &:last-child {
+                    background-color: #fb9702;
+                    width: auto;
+                    height: auto;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+                &:hover {
+                    background-color: #fb9702;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-radius: 5px;
+                }
+                @include computer {
+                    font-size: 14px;
+                    overflow: hidden;
+                }
+            }
+            @include computer {
+                transform: translateX(0px);
+                flex-flow: row nowrap;
+                margin-right: 25px;
+            }
+        }
+    }
+    .navegador-active {
+        transition: transform 0.4s ease;
+        transform: translateY(0px);
+    }
+    .hamburger {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: $colo-border;
+        border-radius: 50%;
+        z-index: 970;
+        @include computer {
+            display: none;
+        }
+    }
+    .eslogan {
+        color: antiquewhite;
+        font-size: 16px;
+        font-weight: 700;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+        background-color: #fb9702;
+        position: fixed;
+        z-index: 950;
+        @include computer {
+            z-index: 990;
+        }
+        img {
+            filter: invert(1);
+            width: 25px;
+            margin-bottom: -5px;
+            margin-right: 5px;
+        }
+        p {
+            margin: 0px;
+            padding-bottom: 5px;
+        }
+    }
+    .nav-content {
+        margin-top: 10vh;
+        color: aliceblue;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        text-align: center;
+        .titulo {
+            h1 {
+                font-size: 4.5rem;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri,
+                    "Trebuchet MS", sans-serif;
+                margin-bottom: 0px;
+                @include computer {
+                    font-size: 6.5rem;
+                }
+            }
+            h2 {
+                font-family: "Gill Sans", "Gill Sans MT", Calibri,
+                    "Trebuchet MS", sans-serif;
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 1rem;
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 30px;
+                text-align: justify;
+                border-right: 0.15em solid $colo-border;
+                animation: typing 4s steps(45) 1s 1 normal both,
+                    blink 1s steps(1) infinite;
+                @keyframes typing {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 100%;
+                    }
+                }
+                @include computer {
+                    @keyframes typing {
+                        from {
+                            width: 0;
+                        }
+
+                        to {
+                            width: 74%;
+                        }
+                    }
+                }
+            }
+        }
+        a {
+            background-color: $color-card;
+            width: 150px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid $colo-border;
+            filter: drop-shadow(0px 0px 10px $colo-border);
+            color: #0b3238;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            z-index: 500;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        p {
+            margin-top: 9px;
+            font-size: 12px;
+        }
+    }
+}
+.contenedor-viajes {
+    position: relative;
+    .titulo-seccion {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 50px;
+
+        h1 {
+            color: #0b3238;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+                sans-serif;
+            border: 3px 10px 3px 10px inset gray aliceblue;
+        }
+    }
+    article {
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 30px;
+        .card {
+            z-index: 940;
+            .card-body {
+                .card-titulo-content {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 20px;
+                    h5 {
+                        display: inline;
+                        font-weight: 700;
+                    }
+                    .message {
+                        border-radius: 3px;
+                        padding: 4px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: aliceblue;
+                    }
+                    .orange {
+                        background-color: $colo-border;
+                    }
+                    .green {
+                        background-color: $color-green;
+                    }
+                    .yellow {
+                        background-color: $color-yellow;
+                    }
+                }
+                p {
+                    display: none;
+                    @include laptop {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .carrusel {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 40px;
+        .contenido-card {
+            height: auto;
+            display: flex;
+            flex-flow: row wrap;
+            .contendor-card {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                gap: 30px;
+                @include compu(){
+                    gap: 50px;
+                }
+                .card-info {
+                    width: 300px;
+                    svg {
+                        width: 40px;
+                    }
+                    small {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    .carrusel-texto {
+                        padding: 10px;
+                        font-size: 15px;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    background-color: #fb9702;
+    width: 100vw;
+    height: auto;
+    .contenedor-items{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        .item-footer {
+            color: aliceblue;
+            .prim {
+                color: $color-btn;
+                font-weight: 600;
+                text-decoration: none;
+                cursor: auto;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            li{
+                cursor: pointer;
+                
+                a{
+                    color: aliceblue;
+                    text-decoration: none;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.copis{
+    width: 100vw;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.839);
+    color: aliceblue;
+    font-size: 14px;
+}

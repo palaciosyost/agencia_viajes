@@ -1,0 +1,523 @@
+$color-card: #fbbf02;
+$color-btn: #0e2a2e;
+$colo-border: #fb9702;
+$colo-hover-btn: #1c616f;
+$color-green: rgb(7, 194, 7);
+$color-red: rgb(188, 18, 18);
+
+@mixin computer {
+    @media (min-width: 920px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+@mixin compu {
+    @media (min-width: 1080px) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+.eslogan {
+    color: antiquewhite;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #fb9702;
+    position: fixed;
+    z-index: 950;
+    top: 0px;
+    @include computer {
+        z-index: 990;
+    }
+    img {
+        filter: invert(1);
+        width: 25px;
+        margin-bottom: -5px;
+        margin-right: 5px;
+    }
+    p {
+        margin: 0px;
+        padding-bottom: 5px;
+    }
+}
+
+.contenedor-viajes {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+
+    .seccion-viajes {
+        @include compu {
+            display: grid;
+            grid-template-columns: 20% 80%;
+        }
+        .contenedor-cards {
+            display: none;
+            @include compu{
+                display: flex;
+                justify-content: center;
+            }
+            .content-secondary {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                flex-flow: column nowrap;
+                .card-primary {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 15px;
+                    background-color: rgb(255, 255, 255);
+                    position: relative;
+                    margin-right: auto;
+                    margin-left: auto;
+                    filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                    margin-bottom: 20px;
+                    @include laptop {
+                        width: 250px;
+                        height: 250px;
+                        margin-top: 50px;
+                    }
+                    .fondo-card {
+                        border-radius: inherit;
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                        color: rgb(255, 255, 255);
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: center;
+                        background-color: $colo-border;
+                        width: 100%;
+                        height: auto;
+                        p {
+                            font-size: 14px;
+                            margin: 0px;
+                            
+                        }
+                        h1 {
+                            @include laptop {
+                                font-size: 1.9em;
+                            }
+                        }
+                    }
+                    .card-content {
+                        font-size: 18px;
+                        padding: 10px;
+                        text-align: center;
+                        font-family: cursive;
+                        
+                    }
+                }
+                .card-secondary {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 15px;
+                    background-color: rgb(255, 255, 255);
+                    position: relative;
+                    margin-right: auto;
+                    margin-left: auto;
+                    filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    margin-top: 50px;
+                    font-weight: 500;
+                    color: $color-btn;
+                    @include laptop {
+                        width: 250px;
+                        height: 250px;
+                    }
+                    .div-content {
+                        width: 80%;
+                    }
+                    .fondo-card-secondary {
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                    .card-text {
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                }
+                .card-tercero {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 15px;
+                    background-color: rgb(255, 255, 255);
+                    position: relative;
+                    margin-right: auto;
+                    margin-left: auto;
+                    filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    margin-top: 50px;
+                    font-weight: 500;
+                    @include laptop {
+                        width: 250px;
+                        height: 250px;
+                    }
+                    .fondo-card-tercero {
+                        font-size: 20px;
+                        color: $colo-border;
+                        padding-top: 20px;
+                    }
+                    .card-content {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        color: white;
+                        background-color: $colo-border;
+                        border-bottom-left-radius: inherit;
+                        border-bottom-right-radius: inherit;
+                        padding-top: 20px;
+                        .card-text {
+                            small {
+                                font-size: 20px;
+                            }
+                            p {
+                                font-size: 15px;
+                                text-decoration: underline;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-secondary {
+                width: 100%;
+                height: auto;
+                .card-primary {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 15px;
+                    background-color: rgb(255, 255, 255);
+                    position: relative;
+                    margin-right: auto;
+                    margin-left: auto;
+                    filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                    margin-bottom: 20px;
+                    
+                    .fondo-card {
+                        border-radius: inherit;
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                        color: rgb(255, 255, 255);
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: center;
+                        background-color: $colo-border;
+                        width: 100%;
+                        height: auto;
+                        p {
+                            font-size: 20px;
+                            margin: 0px;
+                        }
+                        
+                    }
+                    .card-content {
+                        font-size: 1.3em;
+                        padding: 10px;
+                        font-family: cursive;
+                    }
+                }
+                .card-secondary {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 15px;
+                    background-color: rgb(255, 255, 255);
+                    position: relative;
+                    margin-right: auto;
+                    margin-left: auto;
+                    filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    margin-top: 50px;
+                    font-weight: 500;
+                    color: $color-btn;
+
+                    .div-content {
+                        width: 80%;
+                    }
+                    .fondo-card-secondary {
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                    .card-text {
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                }
+                .card-tercero {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 15px;
+                    background-color: rgb(255, 255, 255);
+                    position: relative;
+                    margin-right: auto;
+                    margin-left: auto;
+                    filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    margin-top: 50px;
+                    font-weight: 500;
+
+                    .fondo-card-tercero {
+                        font-size: 20px;
+                        color: $colo-border;
+                        padding-top: 20px;
+                    }
+                    .card-content {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        color: white;
+                        background-color: $colo-border;
+                        border-bottom-left-radius: inherit;
+                        border-bottom-right-radius: inherit;
+                        padding-top: 20px;
+                        .card-text {
+                            small {
+                                font-size: 20px;
+                            }
+                            p {
+                                font-size: 15px;
+                                text-decoration: underline;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contenedor-cards {
+            @include compu {
+                display: block;
+            }
+            
+        }
+        .contenedor-cards-viajes {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-flow: column nowrap;
+            .link{
+                text-decoration: none;
+            }
+            .card {
+                width: 90%;
+                height: 210px;
+                display: flex;
+                flex-flow: row nowrap;
+                position: relative;
+                border-radius: 10px;
+                &:hover {
+                    transform: scale(1.03);
+                    filter: drop-shadow(1px 1px 5px rgb(0, 0, 0));
+                }
+                @include compu {
+                    display: grid;
+                    grid-template-columns: 30% 70%;
+                }
+                .img-card {
+                    width: 100%;
+                    height: 100%;
+
+                    .bg {
+                        top: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        right: 0px;
+                        position: absolute;
+                        background: rgba(33, 36, 38, 0.327);
+                        @include compu {
+                            display: none;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        z-index: 800;
+                        border-radius: 10px;
+                        @include compu {
+                            border-bottom-right-radius: 0px;
+                            border-top-right-radius: 0px;
+                        }
+                    }
+                    .text-img {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        padding-left: 5px;
+                        top: 10px;
+                        color: aliceblue;
+                        h4 {
+                            color: #ffffff;
+                        }
+                        h2 {
+                            position: absolute;
+                            bottom: 5px;
+                            right: 5px;
+                        }
+                        .estado {
+                            width: auto;
+                            height: auto;
+                            padding: 3px;
+                            background-color: $colo-border;
+                            border-radius: 3px;
+                        }
+                        @include compu {
+                            display: none;
+                        }
+                    }
+                }
+                .text-card {
+                    display: none;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    color: $color-btn;
+                    @include compu {
+                        display: block;
+                    }
+                    h3 {
+                        font-weight: 700;
+                    }
+                    .message {
+                        width: auto;
+                        height: auto;
+                        padding: 4px;
+                        border-radius: 5px;
+                        color: #ffffff;
+                    }
+                    .orange {
+                        background-color: $colo-border;
+                    }
+                    .green {
+                        background-color: $color-green;
+                    }
+                    .yellow {
+                        background-color: $color-red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contenido-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 40px;
+    .contendor-card {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        @include compu() {
+            gap: 50px;
+        }
+        .card-info {
+            width: 300px;
+            svg {
+                width: 40px;
+            }
+            small {
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .carrusel-texto {
+                padding: 10px;
+                font-size: 15px;
+                text-align: justify;
+            }
+        }
+    }
+}
+footer {
+    position: relative;
+    bottom: 0px;
+    background-color: #fb9702;
+    width: 100vw;
+    height: auto;
+    .contenedor-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        .item-footer {
+            color: aliceblue;
+            .prim {
+                color: $color-btn;
+                font-weight: 600;
+                text-decoration: none;
+                cursor: auto;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            li {
+                cursor: pointer;
+
+                a {
+                    color: aliceblue;
+                    text-decoration: none;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.copis {
+    width: 100vw;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.839);
+    color: aliceblue;
+    font-size: 14px;
+}

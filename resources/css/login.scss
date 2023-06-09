@@ -1,0 +1,200 @@
+$color-card: #fbbf02;
+$color-btn: #0b3238;
+$colo-border: #fb9702;
+$colo-hover-btn: #1c616f;
+
+@mixin laptop {
+    @media (min-width: 640px) {
+        @content;
+    }
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.fondo {
+    background-image: linear-gradient(
+            rgba(33, 33, 33, 0.559),
+            rgba(33, 33, 33, 0.501)
+        ),
+        url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .boton-back {
+        img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    }
+    .contenedor {
+        background-color: $color-card;
+        width: auto;
+        height: auto;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 15px;
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+
+        @include laptop {
+            text-align: start;
+        }
+
+        .img-content {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid $colo-border;
+            filter: drop-shadow(1px 1px 5px $colo-border);
+        }
+
+        .formulario {
+            width: 300px;
+            height: auto;
+            color: $color-btn;
+            margin-right: auto;
+            margin-left: auto;
+            @include laptop {
+                margin-left: 15px;
+            }
+            .alert {
+                margin-bottom: -30px;
+            }
+
+            .err {
+                color: red;
+            }
+
+            .win {
+                color: green;
+            }
+
+            .titulo-formulario h1 {
+                margin-bottom: 0px;
+                font-weight: bold;
+            }
+
+            .titulo-formulario span {
+                font-size: 12px;
+                font-weight: 700;
+                padding-left: 4px;
+            }
+
+            .content:first-child {
+                margin-top: 25px;
+            }
+
+            .content {
+                margin-bottom: 10px;
+
+                input {
+                    border: none;
+                    border-radius: 40px;
+                    width: 100%;
+                    height: 33px;
+                    padding-left: 10px;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    @include laptop {
+                        width: 90%;
+                        height: 20px;
+                    }
+                }
+
+                label {
+                    position: relative;
+                    width: 100%;
+
+                    span {
+                        font-weight: 800;
+                        font-size: 18px;
+                        float: left;
+                        margin-left: 5px;
+                        @include laptop {
+                            font-size: 13px;
+                        }
+                    }
+
+                    svg {
+                        position: absolute;
+                        top: 34px;
+                        right: 8px;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: gray;
+                        }
+
+                        @include laptop {
+                            top: 27px;
+                            right: 36px;
+                        }
+                    }
+                }
+            }
+
+            input[type="submit"] {
+                background-color: $color-btn;
+                border: none;
+                height: 50px;
+                width: 38%;
+                color: aliceblue;
+                border-radius: 40px;
+                cursor: pointer;
+                margin-top: 20px;
+                margin-right: auto;
+                margin-left: auto;
+
+                &:hover {
+                    background-color: $colo-hover-btn;
+                }
+
+                @include laptop {
+                    margin-right: 0px;
+                    margin-left: 0px;
+                    height: 30px;
+                    margin-top: 0px;
+                }
+            }
+
+            form {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 15px;
+                margin-top: 30px;
+                @include laptop {
+                    margin-top: 30px;
+                    gap: 5px;
+                }
+                .registro-form {
+                    font-size: 11px;
+                    display: block;
+                    text-align: right;
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+body {
+  margin: 0px;
+  font-family: sans-serif; }
+
+.fondo {
+  background-image: linear-gradient(rgba(33, 33, 33, 0.559), rgba(33, 33, 33, 0.501)), url(../img/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .fondo .boton-back img {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+  .fondo .contenedor {
+    background-color: #fbbf02;
+    width: auto;
+    height: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center; }
+    @media (min-width: 640px) {
+      .fondo .contenedor {
+        text-align: start; } }
+    .fondo .contenedor .img-content {
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 2px solid #fb9702;
+      filter: drop-shadow(1px 1px 5px #fb9702); }
+    .fondo .contenedor .formulario {
+      width: 300px;
+      height: auto;
+      color: #0b3238;
+      margin-right: auto;
+      margin-left: auto; }
+      @media (min-width: 640px) {
+        .fondo .contenedor .formulario {
+          margin-left: 15px; } }
+      .fondo .contenedor .formulario .alert {
+        margin-bottom: -30px; }
+      .fondo .contenedor .formulario .err {
+        color: red; }
+      .fondo .contenedor .formulario .win {
+        color: green; }
+      .fondo .contenedor .formulario .titulo-formulario h1 {
+        margin-bottom: 0px;
+        font-weight: bold; }
+      .fondo .contenedor .formulario .titulo-formulario span {
+        font-size: 12px;
+        font-weight: 700;
+        padding-left: 4px; }
+      .fondo .contenedor .formulario .content:first-child {
+        margin-top: 25px; }
+      .fondo .contenedor .formulario .content {
+        margin-bottom: 10px; }
+        .fondo .contenedor .formulario .content input {
+          border: none;
+          border-radius: 40px;
+          width: 100%;
+          height: 33px;
+          padding-left: 10px; }
+          .fondo .contenedor .formulario .content input:focus {
+            outline: none; }
+          @media (min-width: 640px) {
+            .fondo .contenedor .formulario .content input {
+              width: 90%;
+              height: 20px; } }
+        .fondo .contenedor .formulario .content label {
+          position: relative;
+          width: 100%; }
+          .fondo .contenedor .formulario .content label span {
+            font-weight: 800;
+            font-size: 18px;
+            float: left;
+            margin-left: 5px; }
+            @media (min-width: 640px) {
+              .fondo .contenedor .formulario .content label span {
+                font-size: 13px; } }
+          .fondo .contenedor .formulario .content label svg {
+            position: absolute;
+            top: 34px;
+            right: 8px;
+            cursor: pointer; }
+            .fondo .contenedor .formulario .content label svg:hover {
+              color: gray; }
+            @media (min-width: 640px) {
+              .fondo .contenedor .formulario .content label svg {
+                top: 27px;
+                right: 36px; } }
+      .fondo .contenedor .formulario input[type="submit"] {
+        background-color: #0b3238;
+        border: none;
+        height: 50px;
+        width: 38%;
+        color: aliceblue;
+        border-radius: 40px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto; }
+        .fondo .contenedor .formulario input[type="submit"]:hover {
+          background-color: #1c616f; }
+        @media (min-width: 640px) {
+          .fondo .contenedor .formulario input[type="submit"] {
+            margin-right: 0px;
+            margin-left: 0px;
+            height: 30px;
+            margin-top: 0px; } }
+      .fondo .contenedor .formulario form {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 15px;
+        margin-top: 30px; }
+        @media (min-width: 640px) {
+          .fondo .contenedor .formulario form {
+            margin-top: 30px;
+            gap: 5px; } }
+        .fondo .contenedor .formulario form .registro-form {
+          font-size: 11px;
+          display: block;
+          text-align: right;
+          margin-right: 40px; }
+
+/*# sourceMappingURL=login.css.map */

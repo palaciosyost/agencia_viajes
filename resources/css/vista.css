@@ -1,0 +1,416 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0px;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  position: relative; }
+
+.eslogan {
+  color: antiquewhite;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #fb9702;
+  position: fixed;
+  z-index: 950;
+  top: 0px; }
+  @media (min-width: 920px) {
+    .eslogan {
+      z-index: 990; } }
+  .eslogan img {
+    filter: invert(1);
+    width: 25px;
+    margin-bottom: -5px;
+    margin-right: 5px; }
+  .eslogan p {
+    margin: 0px;
+    padding-bottom: 5px; }
+
+.contenedor-viajes {
+  width: 100%;
+  height: auto;
+  margin-top: 100px; }
+  @media (min-width: 1080px) {
+    .contenedor-viajes .seccion-viajes {
+      display: grid;
+      grid-template-columns: 20% 80%; } }
+  .contenedor-viajes .seccion-viajes .contenedor-cards {
+    display: none; }
+    @media (min-width: 1080px) {
+      .contenedor-viajes .seccion-viajes .contenedor-cards {
+        display: flex;
+        justify-content: center; } }
+    .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      flex-flow: column nowrap; }
+      .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        background-color: white;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        filter: drop-shadow(0px 2px 4px #2d2c2c);
+        margin-bottom: 20px; }
+        @media (min-width: 600px) {
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary {
+            width: 250px;
+            height: 250px;
+            margin-top: 50px; } }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary .fondo-card {
+          border-radius: inherit;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+          color: white;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          background-color: #fb9702;
+          width: 100%;
+          height: auto; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary .fondo-card p {
+            font-size: 14px;
+            margin: 0px; }
+          @media (min-width: 600px) {
+            .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary .fondo-card h1 {
+              font-size: 1.9em; } }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary .card-content {
+          font-size: 18px;
+          padding: 10px;
+          text-align: center;
+          font-family: cursive; }
+      .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        background-color: white;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        filter: drop-shadow(0px 2px 4px #2d2c2c);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-top: 50px;
+        font-weight: 500;
+        color: #0e2a2e; }
+        @media (min-width: 600px) {
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary {
+            width: 250px;
+            height: 250px; } }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary .div-content {
+          width: 80%; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary .fondo-card-secondary {
+          text-align: center;
+          font-size: 18px; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary .card-text {
+          text-align: center;
+          font-size: 18px; }
+      .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        background-color: white;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        filter: drop-shadow(0px 2px 4px #2d2c2c);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-top: 50px;
+        font-weight: 500; }
+        @media (min-width: 600px) {
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero {
+            width: 250px;
+            height: 250px; } }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .fondo-card-tercero {
+          font-size: 20px;
+          color: #fb9702;
+          padding-top: 20px; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content {
+          display: flex;
+          flex-flow: column nowrap;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          color: white;
+          background-color: #fb9702;
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+          padding-top: 20px; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content .card-text small {
+            font-size: 20px; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content .card-text p {
+            font-size: 15px;
+            text-decoration: underline; }
+            .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content .card-text p:hover {
+              cursor: pointer; }
+    .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary {
+      width: 100%;
+      height: auto; }
+      .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary {
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+        background-color: white;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        filter: drop-shadow(0px 2px 4px #2d2c2c);
+        margin-bottom: 20px; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary .fondo-card {
+          border-radius: inherit;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+          color: white;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          background-color: #fb9702;
+          width: 100%;
+          height: auto; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary .fondo-card p {
+            font-size: 20px;
+            margin: 0px; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-primary .card-content {
+          font-size: 1.3em;
+          padding: 10px;
+          font-family: cursive; }
+      .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary {
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+        background-color: white;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        filter: drop-shadow(0px 2px 4px #2d2c2c);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-top: 50px;
+        font-weight: 500;
+        color: #0e2a2e; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary .div-content {
+          width: 80%; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary .fondo-card-secondary {
+          text-align: center;
+          font-size: 18px; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-secondary .card-text {
+          text-align: center;
+          font-size: 18px; }
+      .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero {
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+        background-color: white;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        filter: drop-shadow(0px 2px 4px #2d2c2c);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-top: 50px;
+        font-weight: 500; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .fondo-card-tercero {
+          font-size: 20px;
+          color: #fb9702;
+          padding-top: 20px; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content {
+          display: flex;
+          flex-flow: column nowrap;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          color: white;
+          background-color: #fb9702;
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+          padding-top: 20px; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content .card-text small {
+            font-size: 20px; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content .card-text p {
+            font-size: 15px;
+            text-decoration: underline; }
+            .contenedor-viajes .seccion-viajes .contenedor-cards .content-secondary .card-tercero .card-content .card-text p:hover {
+              cursor: pointer; }
+  @media (min-width: 1080px) {
+    .contenedor-viajes .seccion-viajes .contenedor-cards {
+      display: block; } }
+  .contenedor-viajes .seccion-viajes .contenedor-cards-viajes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-flow: column nowrap; }
+    .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .link {
+      text-decoration: none; }
+    .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card {
+      width: 90%;
+      height: 210px;
+      display: flex;
+      flex-flow: row nowrap;
+      position: relative;
+      border-radius: 10px; }
+      .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card:hover {
+        transform: scale(1.03);
+        filter: drop-shadow(1px 1px 5px black); }
+      @media (min-width: 1080px) {
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card {
+          display: grid;
+          grid-template-columns: 30% 70%; } }
+      .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card {
+        width: 100%;
+        height: 100%; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card .bg {
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          position: absolute;
+          background: rgba(33, 36, 38, 0.327); }
+          @media (min-width: 1080px) {
+            .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card .bg {
+              display: none; } }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card img {
+          width: 100%;
+          height: 100%;
+          z-index: 800;
+          border-radius: 10px; }
+          @media (min-width: 1080px) {
+            .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card img {
+              border-bottom-right-radius: 0px;
+              border-top-right-radius: 0px; } }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card .text-img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          padding-left: 5px;
+          top: 10px;
+          color: aliceblue; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card .text-img h4 {
+            color: #ffffff; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card .text-img h2 {
+            position: absolute;
+            bottom: 5px;
+            right: 5px; }
+          .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card .text-img .estado {
+            width: auto;
+            height: auto;
+            padding: 3px;
+            background-color: #fb9702;
+            border-radius: 3px; }
+          @media (min-width: 1080px) {
+            .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .img-card .text-img {
+              display: none; } }
+      .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .text-card {
+        display: none;
+        padding-left: 10px;
+        padding-top: 10px;
+        color: #0e2a2e; }
+        @media (min-width: 1080px) {
+          .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .text-card {
+            display: block; } }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .text-card h3 {
+          font-weight: 700; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .text-card .message {
+          width: auto;
+          height: auto;
+          padding: 4px;
+          border-radius: 5px;
+          color: #ffffff; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .text-card .orange {
+          background-color: #fb9702; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .text-card .green {
+          background-color: #07c207; }
+        .contenedor-viajes .seccion-viajes .contenedor-cards-viajes .card .text-card .yellow {
+          background-color: #bc1212; }
+
+.contenido-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px; }
+  .contenido-card .contendor-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px; }
+    @media (min-width: 1080px) {
+      .contenido-card .contendor-card {
+        gap: 50px; } }
+    .contenido-card .contendor-card .card-info {
+      width: 300px; }
+      .contenido-card .contendor-card .card-info svg {
+        width: 40px; }
+      .contenido-card .contendor-card .card-info small {
+        font-size: 20px;
+        font-weight: 500; }
+      .contenido-card .contendor-card .card-info .carrusel-texto {
+        padding: 10px;
+        font-size: 15px;
+        text-align: justify; }
+
+footer {
+  position: relative;
+  bottom: 0px;
+  background-color: #fb9702;
+  width: 100vw;
+  height: auto; }
+  footer .contenedor-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px; }
+    footer .contenedor-items .item-footer {
+      color: aliceblue; }
+      footer .contenedor-items .item-footer .prim {
+        color: #0e2a2e;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: auto; }
+        footer .contenedor-items .item-footer .prim:hover {
+          text-decoration: none; }
+      footer .contenedor-items .item-footer li {
+        cursor: pointer; }
+        footer .contenedor-items .item-footer li a {
+          color: aliceblue;
+          text-decoration: none; }
+        footer .contenedor-items .item-footer li:hover {
+          text-decoration: underline; }
+
+.copis {
+  width: 100vw;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.839);
+  color: aliceblue;
+  font-size: 14px; }
+
+/*# sourceMappingURL=vista.css.map */

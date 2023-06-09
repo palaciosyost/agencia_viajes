@@ -1,0 +1,298 @@
+$color-card: #fbbf02;
+$color-btn: #0b3238;
+$colo-border: #fb9702;
+$colo-hover-btn: #1c616f;
+$color-red: rgb(219, 10, 10);
+$color-green: rgb(19, 170, 19);
+$color-texto-opacity: rgb(147, 144, 144);
+
+@mixin tablet {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media screen and (min-width: 730px) {
+        @content;
+    }
+}
+//navbar global
+.navbar {
+    background-color: $colo-border;
+    .dropdown-item {
+        &:hover {
+            background-color: $colo-border;
+            color: aliceblue;
+        }
+    }
+}
+//seccion global de copntenedores
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .titulo-form {
+        color: $colo-hover-btn;
+    }
+    label {
+        font-weight: 600;
+        color: $colo-hover-btn;
+    }
+    input[type="submit"] {
+        font-weight: 600;
+        width: 200px;
+    }
+    @include tablet() {
+        width: 55%;
+    }
+}
+//seccion de items de viajes
+.contenedor-viajes {
+    .titulo-seccion {
+        margin-top: 40px;
+        text-align: center;
+        margin-bottom: 40px;
+        
+    }
+    article {
+        display: flex;
+        gap: 30px;
+        flex-flow: row wrap;
+        margin-left: 20px;
+        justify-content: center;
+        .card-title {
+            display: inline;
+            font-weight: 700;
+        }
+        .message {
+            border-radius: 3px;
+            padding: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            color: aliceblue;
+        }
+        .orange {
+            background-color: $colo-border;
+        }
+        .green {
+            background-color: $color-green;
+        }
+        .red {
+            background-color: $color-red;
+        }
+    }
+}
+
+//VISTA DEL LOS VIAJES SELECCIONADO {{ RUTA MENU/ID/INFO }}
+
+.contenedor {
+    .seccion {
+        @include laptop {
+            display: grid;
+            grid-template-columns: 65% 35%;
+        }
+        .content-primary {
+            .img-seccion {
+                width: 100%;
+                height: 350px;
+                @include laptop {
+                    height: 450px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .seccion-primary {
+                width: 100%;
+                height: auto;
+                // margin-left: 10px;
+                padding: 10px;
+                .text-seccion {
+                    p {
+                        color: $color-texto-opacity;
+                        margin-top: 10px;
+                        margin-bottom: 2px;
+                        font-size: 19px;
+                        position: relative;
+                    }
+                    h1 {
+                        color: $color-btn;
+                        font-size: 2em;
+                    }
+                    .btn-danger{
+                        position: relative;
+                        width: 100px;
+                        float: left;
+                        margin-right: 10px;
+                    }
+                    .message {
+                        border-radius: 3px;
+                        padding: 4px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: aliceblue;
+                    }
+                    .orange {
+                        background-color: $colo-border;
+                    }
+                    .green {
+                        background-color: $color-green;
+                    }
+                    .red {
+                        background-color: $color-red;
+                    }
+                }
+                .eslogan-seccion {
+                    font-family: cursive;
+                    font-size: 1.2em;
+                }
+                .info-seccion {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+                    .info-content {
+                        width: 200px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .content-secondary {
+            width: 100%;
+            height: auto;
+            .card-primary {
+                width: 300px;
+                height: 300px;
+                border-radius: 15px;
+                background-color: rgb(255, 255, 255);
+                position: relative;
+                margin-right: auto;
+                margin-left: auto;
+                filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                margin-bottom: 20px;
+                @include laptop {
+                    width: 250px;
+                    height: 250px;
+                    margin-top: 50px;
+                }
+                .fondo-card {
+                    border-radius: inherit;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    color: rgb(255, 255, 255);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    background-color: $colo-border;
+                    width: 100%;
+                    height: auto;
+                    p {
+                        font-size: 18px;
+                        text-decoration: line-through;
+                        margin: 0px;
+                        @include laptop {
+                            font-size: 18px;
+                        }
+                    }
+                    h1 {
+                        @include laptop {
+                            font-size: 1.9em;
+                        }
+                    }
+                }
+                .card-content {
+                    font-size: 1.3em;
+                    padding: 10px;
+                    font-family: cursive;
+                    @include laptop {
+                        font-size: 1em;
+                    }
+                }
+            }
+            .card-secondary {
+                width: 300px;
+                height: 300px;
+                border-radius: 15px;
+                background-color: rgb(255, 255, 255);
+                position: relative;
+                margin-right: auto;
+                margin-left: auto;
+                filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                flex-flow: column nowrap;
+                justify-content: center;
+                margin-top: 50px;
+                font-weight: 500;
+                color: $color-btn;
+                @include laptop {
+                    width: 250px;
+                    height: 250px;
+                }
+                .div-content {
+                    width: 80%;
+                }
+                .fondo-card-secondary {
+                    text-align: center;
+                    font-size: 18px;
+                }
+                .card-text {
+                    text-align: center;
+                    font-size: 18px;
+                }
+            }
+            .card-tercero {
+                width: 300px;
+                height: 300px;
+                border-radius: 15px;
+                background-color: rgb(255, 255, 255);
+                position: relative;
+                margin-right: auto;
+                margin-left: auto;
+                filter: drop-shadow(0px 2px 4px rgb(45, 44, 44));
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                flex-flow: column nowrap;
+                justify-content: center;
+                margin-top: 50px;
+                font-weight: 500;
+                @include laptop {
+                    width: 250px;
+                    height: 250px;
+                }
+                .fondo-card-tercero {
+                    font-size: 20px;
+                    color: $colo-border;
+                    padding-top: 20px;
+                }
+                .card-content {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    color: white;
+                    background-color: $colo-border;
+                    border-bottom-left-radius: inherit;
+                    border-bottom-right-radius: inherit;
+                    padding-top: 20px;
+                    .card-text {
+                        small {
+                            font-size: 20px;
+                        }
+                        p {
+                            font-size: 15px;
+                            text-decoration: underline;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
